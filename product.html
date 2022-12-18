@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="Images/logo-color.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Decorativehut</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar" id="nav">
+        <nav>
+          <a href="#">
+            <div class="logo">
+              <img src="Images/logo-no-background.png" />
+            </div>
+          </a>
+          <ul id="navbar">
+            <div class="closeBtn" onclick="closeMenu()">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+            <li
+              id="shop"
+              onmouseover="dropdownShow()"
+              onmouseleave="dropdownhide()"
+            >
+              <a href="#">Shop</a><i class="ri-arrow-down-s-line"></i>
+            </li>
+            <li><a href="#slogan">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+          <div
+            class="dropdown"
+            id="list"
+            onmouseover="dropdownShow()"
+            onmouseleave="dropdownhide()"
+          >
+            <div class="dropdown_blocks_main">
+              <div class="dropdown_block block1">
+                <h4>Brass Collection</h4>
+                <li><a href="">Wall Hangings</a></li>
+                <li><a href="">Diyas and lanterns</a></li>
+                <li><a href="">Showpiece and Figurines</a></li>
+                <li><a href="">Bells and Chimes</a></li>
+              </div>
+              <div class="dropdown_block block2">
+                <h4>Hardware Collection</h4>
+                <li><a href="">Brass Door Handles</a></li>
+                <li><a href="">Door Knobs</a></li>
+                <li><a href="">Door Knockers</a></li>
+              </div>
+              <div class="dropdown_block block3">
+                <h4>Chandelier Collection</h4>
+                <li><a href="">Crystal Chandeliers</a></li>
+                <li><a href="">Pendant lights</a></li>
+                <li><a href="">Jute Rope Collection</a></li>
+              </div>
+              <div class="dropdown_block block4">
+                <h4>Decoration Wall Lights</h4>
+                <li><a href="">Wooden Lights</a></li>
+                <li><a href="">Wall Mounted lamps</a></li>
+              </div>
+            </div>
+          </div>
+          <div class="hamburger" onclick="openMenu()">
+            <i class="ri-menu-3-line"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================== -->
+    <!--PRODUCT PAGE -->
+    <!-- =========================== -->
+
+    <div class="faded" id="faded">
+      <div class="fadedMain">
+        <div class="fadedcloseBtn">
+          <i class="ri-close-line" onclick="hide()"></i>
+        </div>
+        <div class="fadedProductImagesPart another">
+          <div class="fadedProductImageBox">
+            
+            <div id="slide2">
+              <div class="mainImage">
+                <img src="Images/casting.jpg" />
+              </div>
+
+              <div class="mainImage">
+                <img src="Images/Cleanings.jpg" />
+              </div>
+
+              <div class="mainImage">
+                <img src="Images/casting.jpg" />
+              </div>
+
+              <div class="mainImage">
+                <img src="Images/Cleanings.jpg" />
+              </div>
+            </div>
+          </div>
+          <div class="rightsidenavigatearea">
+            <h2>Brass Murli Krishna Showpiece</h2>
+            <div class="fadedbottomImages">
+              <div class="block" id="block5">
+                <img src="Images/casting.jpg" />
+              </div>
+              <div class="block" id="block6">
+                <img src="Images/Cleanings.jpg" />
+              </div>
+              <div class="block" id="block7">
+                <img src="Images/casting.jpg" />
+              </div>
+              <div class="block" id="block8">
+                <img src="Images/Cleanings.jpg" />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="spacetop"></div>
+
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="Index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+    </div>
+
+    <div class="ProductPageMain">
+      <div class="ProductImagesPart">
+        <div class="ProductImageBox">
+          <div class="slideBtnsArea">
+            <div class="previous" id="previous">
+              <i class="ri-arrow-left-s-line"></i>
+            </div>
+            <div class="next" id="next">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+
+          <div id="slide">
+            <div class="mainImage" onclick="show()">
+              <img src="Images/casting.jpg" />
+            </div>
+
+            <div class="mainImage" onclick="show()">
+              <img src="Images/Cleanings.jpg" />
+            </div>
+
+            <div class="mainImage" onclick="show()">
+              <img src="Images/casting.jpg" />
+            </div>
+
+            <div class="mainImage" onclick="show()">
+              <img src="Images/Cleanings.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottomImages">
+          <div class="block" id="block1">
+            <img src="Images/casting.jpg" />
+          </div>
+          <div class="block" id="block2">
+            <img src="Images/Cleanings.jpg" />
+          </div>
+          <div class="block" id="block3">
+            <img src="Images/casting.jpg" />
+          </div>
+          <div class="block" id="block4">
+            <img src="Images/Cleanings.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="productDesriptionArea">
+        <div class="descMain">
+          <h1>Brass Murli Krishna Showpiece</h1>
+          <div class="itemCode">
+            <h5>Item Code :</h5>
+            <p>DHB/002</p>
+          </div>
+          <div class="shoppingOptionsmain">
+            <h3>Shopping Options</h3>
+            <div class="marketPlaces">
+              <a href="">
+                <div class="amazonPage pages">
+                  <img src="Images/Amazon-logo4.jpg" />
+                </div>
+              </a>
+              <a href="">
+                <div class="flipkartPage pages">
+                  <img src="Images/Flipkart.jpg" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="shareOptions">
+            <h6>Share:</h6>
+            <i class="ri-facebook-fill"></i>
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-whatsapp-fill"></i>
+          </div>
+          <br />
+          <h5>Product Description</h5>
+          <p>
+            This Krishna statue is made of solid brass, hand-carved and
+            hand-polished by skilled artisans. A beautiful addition to your home
+            or garden or office space. Display this hand-carved bronze Krishna
+            statue with pride at home or in your retail space. The intricate
+            details make this a great piece for collectors, religious devotees
+            and shop owners. Featuring a beautiful cast of Krishna, this statue
+            is ideal for all ages. This statue would make a wonderful gift for
+            any occasion. The vibrantly colored Krishna statue is a spiritual
+            reminder of the Lord's love and friendship. Made of brass, the
+            sculpture features a drape over his shoulders and sits on a
+            decorative base to complete the design. This Statue of Lord Krishna
+            is ready to ship. It can also be used in your home or office as a
+            conversation piece. Buy it now and enjoy the beauty of this statue!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section id="similiarProducts">
+      <h1>Similiar Products</h1>
+      
+    </section>
+
+    <!-- Footer Area -->
+
+    <footer>
+      <h2>Get In Touch</h2>
+      <div class="footerMain">
+        <div class="address_section sections">
+          <h3>Address</h3>
+          <div class="addresspart">
+            <i class="ri-map-pin-fill"></i>
+            <h4>
+              1/217 DH Shanti Nagar,<br />
+              Sanjay Gandhi Colony, Ravan <br />Teela Road, Aligarh - 202001
+              (U.P.)
+            </h4>
+          </div>
+        </div>
+        <div class="contact_section sections">
+          <h3>Contact</h3>
+          <div class="contactpart">
+            <i class="ri-phone-fill"></i>
+            <h5>+91 8936932172</h5>
+            <br />
+          </div>
+        </div>
+        <div class="Mobile_section sections">
+          <h3>Social Media</h3>
+          <div class="facebook">
+            <i class="ri-facebook-circle-fill"></i
+            ><a href="www.faccebook.com"><h5>Facebook</h5></a>
+          </div>
+          <div class="facebook">
+            <i class="ri-instagram-fill"></i
+            ><a href="instagram.com"><h5>Instagram</h5></a>
+          </div>
+          <div class="facebook">
+            <i class="ri-mail-fill"></i>
+            <h5>response.decorativehut@gmail.com</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#">
+      <div class="navigateBtn" id="navigateBtn" style="opacity: 1">
+        <i class="ri-arrow-up-s-line"></i>
+      </div>
+    </a>
+
+    <div class="socialLinks">
+      <div class="links" id="links">
+        <a href="tel:+91-73005-45848" style="background: #003558">
+          <i class="ri-phone-line"></i>
+        </a>
+        <a
+          href="https://wa.me/+918936932172/?text=Hello I Want to Purchase a Product"
+          style="background: rgb(8, 184, 8)"
+        >
+          <i class="ri-whatsapp-line"></i>
+        </a>
+        <a
+          href="mailto:response.decorativehut@gmail.com"
+          style="background: #000"
+        >
+          <i class="ri-mail-line"></i>
+        </a>
+      </div>
+      <div class="chatBOx">
+        <button type="button" id="expandBtn" onclick="expand()">
+          <i class="ri-discuss-line"></i>
+        </button>
+        <button type="button" id="closeBtn" onclick="hidesocial()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="file.js"></script>
+  </body>
+</html>
